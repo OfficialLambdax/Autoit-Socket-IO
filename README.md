@@ -1,34 +1,38 @@
+Go To https://github.com/tarreislam/Autoit-Socket-IO for the Original SocketIO and its describtion.
 
-Version 2.x.x and 3.x.x has been moved to [branch 3.x](https://github.com/tarreislam/Autoit-Socket-IO/tree/3.x)
+This Fork Repository is the SocketIO Extended (SocketIOEx) repository for Version 3.0.0 of SocketIO and its netcode Framework.
 
-## About Autoit-Socket-IO
-Autoit-Socket-IO is a event driven TCP/IP wrapper heavily inspired from [Socket.IO](https://socket.io/) with focus on user friendliness and long term sustainability.
 
-I constantly want to make this UDF faster and better, so if you have any suggestions or questions (beginner and advanced) Do not hesitate to ask them, I will gladly help!
+First thing first. This Project is abandoned since 29.04.2021 (DD/MM/YYYY).
+It was ment to improve SocketIO Speed wise, security wise and to add all kinds of new Options. However over time the whole UDF turned out to be just a massive playground for me. I learned alot if things while coding in it. And in the end i stumbled across multiple mayor bugs which required entire overhauls of the core. I decided against doing that, not just because it was alot of work but also because the UDF would no longer look like it was ever the SocketIO UDF. So i started coding my own TCP UDF and to take all knowledge i gained from modifying SocketIO to my own which can be found @ https://github.com/OfficialLambdax/_netcode_Core-UDF
+Overall it is best that you never use this in any of your Projects. But maybe you can learn something just like i did or maybe the Original Authors finds something of use in this.
 
-### Key features
-* Simple API
-* 99% data-type serialization thanks to [Autoit-Serialize](https://www.autoitscript.com/forum/topic/203728-autoit-serialize)
-* Can easily be extended with your own functionality thanks to [Autoit-Events](https://www.autoitscript.com/forum/topic/203866-autoit-events/)
-* "Educational" examples
-* Data encryption thanks to _<Crypt.au3>
 
-### Limitations
-* Speed. This UDF will sacrifice some speed for convenience
+This Extended Version is released as is. There will be no updates, fixes and alike including support or documentation. I pretty much just dump it here to be never touched again. But you can ask me questions about certain systems, i might still be able to answer them.
 
-### Getting started
-* Download the script from AutoIt or pull it from the official github repo `git@github.com:tarreislam/Autoit-Socket-IO.git` and checkout the tag `4.0.0-beta`
-* Check out the [documentaion](Docs/README.md)
-* Take a look in the `examples/` folder
 
-### Changelog
-To see changes from 3.x.x and 2.x.x please checkout the [3.x branch](https://github.com/tarreislam/Autoit-Socket-IO/blob/3.x/upgrade.md)
+SocketIOEx differs in a couple ways
+- It is faster (up to 20 mb/s)
+- It can hold alot more Clients (i cant name a number)
+- It has a Incomplete Packet buffer. So incomplete packets wont bother you.
+- It has a different packet format. Packets are smaller and can be processed faster.
+- The serializer UDF was removed duo to it being slow and prone to crash and replaced with a faster but less featured serializer
+- Certain easy ways to get the UDF to crash where removed (a wrong packet for example)
+- The encryption Speed was improved
+- A packet safety and validator feature was added to make sure that packets are not corrupted and actually received
+- The core TCP Functions got replaced so TCP interactions got much faster
+- A Flood prevention mechanism to make sure the Server and Client never receive more data then they can process was added
+- and more i dont remember
 
-**Version 4.0.0-beta** (This update break scripts.)
 
- * Code base fully rewritten with [Autoit-Events](https://www.autoitscript.com/forum/topic/203866-autoit-events/) and decoupled to improve code quality and reduce bloat.
- * The new UDF is very different from 3.x.x so please checkout the [UPGRADE guide](https://github.com/tarreislam/Autoit-Socket-IO/blob/master/UPGRADE.md) to fully understand all changes
- * Added new documentation [documentaion](Docs/README.md)
+I also coded a framework around the SocketIOEx which was ment to add additional options and automations. It featured
+- Auto Syncing. A feature to syn custom data between the server and the client on connect
+- A reduced version of CryptoNG by TheXman
+- The abillity to route all traffic through Tor
+- Differently working Send and Broadcast Functions
+- A latency mechanic to auto set the Autoit Option "TCPTimeout" so that TCPSend() TCPConnect() doesnt fail because of a to short timeout. The feature became obsolete once these TCP functions got replaced
+- A Proxy and Relay feature
+- and more i dont remember
 
-### Success stories
-Since December 2017-now I have used version 1.5.0 in an production environment for 150+ clients with great success, the only downtime is planned windows updates and power outages.
+
+Overall both the SocketIOEx and netcode UDF are unfinished, have bugs, missing features and alot of systems would need entire overhauls to become solid. Certain things in these UDFs i touched for the first time and thats how the UDF looks. Messy and Garbage.
