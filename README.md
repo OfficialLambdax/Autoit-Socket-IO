@@ -4,7 +4,7 @@ This Fork Repository is the SocketIO Extended (SocketIOEx) repository for Versio
 
 
 First thing first. This Project is abandoned since 29.04.2021 (DD/MM/YYYY).
-It was ment to improve SocketIO Speed wise, security wise and to add all kinds of new Options. However over time the whole UDF turned out to be just a massive playground for me. I learned alot if things while coding in it. And in the end i stumbled across multiple mayor bugs which required entire overhauls of the core. I decided against doing that, not just because it was alot of work but also because the UDF would no longer look like it was ever the SocketIO UDF. So i started coding my own TCP UDF and to take all knowledge i gained from modifying SocketIO to my own which can be found @ https://github.com/OfficialLambdax/_netcode_Core-UDF
+It was ment to improve SocketIO Speed wise, security wise and to add all kinds of new Options. However over time the whole UDF turned out to be just a massive playground for me. I learned alot if things while coding in it. And in the end i stumbled across multiple mayor bugs which required entire overhauls of the core. I decided against doing that, not just because it was alot of work but also because the UDF would no longer look like it was ever the SocketIO UDF. So i started coding my own TCP UDF and to took all knowledge i gained from modifying SocketIO to my own which can be found @ https://github.com/OfficialLambdax/_netcode_Core-UDF
 Overall it is best that you never use this in any of your Projects. But maybe you can learn something just like i did or maybe the Original Authors finds something of use in this.
 
 
